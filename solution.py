@@ -9,6 +9,7 @@ def main():
     predicted_result = []
     df = np.loadtxt(input_dir + '/data.data')
     df = pd.DataFrame(df, columns=['column 1', 'column 2'])
+    #just sum the two columns
     df['result'] = df['column 1'] + df['column 2']
     np.savetxt(output_dir + '/data.predict', np.array(df['result']))
     return 0
